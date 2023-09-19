@@ -1,0 +1,62 @@
+body{
+    background-image: url("iit1.jpg");
+    background-color: none;
+}
+
+.image-container{
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+
+img{
+    max-width: 350px;
+}
+
+.menu-container{
+    max-width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.menu-container a {
+    padding: 100px;
+    color: white;
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.text-content{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text-content{
+    z-index: 1;
+    margin-top: 30px;
+}
+
+span.main-title{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+p.content-title{
+    font-size: large;
+    font-weight: bold;
+}
+
+.side-image-container{
+    z-index: -1;
+    position: absolute;
+    right: 39%;
+    top: 60%;
+}
