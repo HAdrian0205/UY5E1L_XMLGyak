@@ -290,16 +290,16 @@
         <cim>Oktatási Konferencia</cim>
         <hallgatok>
             <hallgato>
-                <nev>Adrián</nev>
-                <lakcim>Miskolc, Tanár utca 12.</lakcim>
-            </hallgato>
-            <hallgato>
                 <nev>Gábor</nev>
-                <lakcim>Miskolc, Kiss Ernő utca 19.</lakcim>
+                <lakcim>Miskolc, Leander utca 19.</lakcim>
             </hallgato>
             <hallgato>
                 <nev>Bence</nev>
                 <lakcim>Miskolc, Kóbor János utca 3.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Adrián</nev>
+                <lakcim>Miskolc, Köteles utca 12.</lakcim>
             </hallgato>
         </hallgatok>
         <helyszin>Miskolci Egyetem</helyszin>
