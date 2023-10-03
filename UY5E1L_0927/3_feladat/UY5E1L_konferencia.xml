@@ -1,0 +1,173 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<UY5E1L_konferencia>
+    <konferencia id="konf_1" type="konferencia">
+        <cim>Konferencia az informatikáról</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Péter</nev>
+                <lakcim>Budapest, Kossuth utca 5.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Budapesti Egyetem</helyszin>
+        <eloado>
+            <nev>Dr. Kovács</nev>
+            <adoszam>123456789</adoszam>
+            <lakcim>Budapest, Alkotmány utca 10.</lakcim>
+        </eloado>
+        <datum>2023-11-15</datum>
+    </konferencia>
+
+    <konferencia id="konf_2" type="konferencia">
+        <cim>Környezetvédelmi Konferencia</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Anna</nev>
+                <lakcim>Debrecen, Virág utca 3.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Debreceni Konferenciaközpont</helyszin>
+        <eloado>
+            <nev>Prof. Nagy</nev>
+            <adoszam>987654321</adoszam>
+            <lakcim>Debrecen, Tavasz utca 7.</lakcim>
+        </eloado>
+        <datum>2023-12-10</datum>
+    </konferencia>
+
+    <konferencia id="konf_3" type="konferencia">
+        <cim>Művészeti Fórum</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Mária</nev>
+                <lakcim>Szeged, Képzőművész utca 2.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Szegedi Művészeti Galéria</helyszin>
+        <eloado>
+            <nev>Dr. Varga</nev>
+            <adoszam>456789012</adoszam>
+            <lakcim>Szeged, Festő utca 6.</lakcim>
+        </eloado>
+        <datum>2024-02-20</datum>
+    </konferencia>
+
+    <konferencia id="konf_4" type="konferencia">
+        <cim>Egészségügyi Fórum</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Gábor</nev>
+                <lakcim>Pécs, Egészség utca 8.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Pécsi Kórház</helyszin>
+        <eloado>
+            <nev>Dr. Szabó</nev>
+            <adoszam>234567890</adoszam>
+            <lakcim>Pécs, Orvos utca 12.</lakcim>
+        </eloado>
+        <datum>2024-03-05</datum>
+    </konferencia>
+
+    <konferencia id="konf_5" type="konferencia">
+        <cim>Üzleti Fórum</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Zoltán</nev>
+                <lakcim>Székesfehérvár, Vállalkozó utca 4.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Székesfehérvári Kongresszusi Központ</helyszin>
+        <eloado>
+            <nev>Dr. Tóth</nev>
+            <adoszam>345678901</adoszam>
+            <lakcim>Székesfehérvár, Üzleti út 9.</lakcim>
+        </eloado>
+        <datum>2024-04-18</datum>
+    </konferencia>
+
+    <konferencia id="konf_6" type="konferencia">
+        <cim>Tudományos Konferencia</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Eszter</nev>
+                <lakcim>Győr, Tudós utca 1.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Győri Tudományos Központ</helyszin>
+        <eloado>
+            <nev>Prof. Kovács</nev>
+            <adoszam>567890123</adoszam>
+            <lakcim>Győr, Kutató tér 11.</lakcim>
+        </eloado>
+        <datum>2024-05-22</datum>
+    </konferencia>
+
+    <konferencia id="konf_7" type="konferencia">
+        <cim>Sport Konferencia</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Bence</nev>
+                <lakcim>Szombathely, Sport utca 6.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Szombathelyi Sportközpont</helyszin>
+        <eloado>
+            <nev>Dr. Molnár</nev>
+            <adoszam>678901234</adoszam>
+            <lakcim>Szombathely, Edző tér 3.</lakcim>
+        </eloado>
+        <datum>2024-06-15</datum>
+    </konferencia>
+
+    <konferencia id="konf_8" type="konferencia">
+        <cim>Gasztronómiai Konferencia</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Júlia</nev>
+                <lakcim>Eger, Szakács utca 7.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Egri Gasztronómiai Iskola</helyszin>
+        <eloado>
+            <nev>Chef Kovács</nev>
+            <adoszam>789012345</adoszam>
+            <lakcim>Eger, Séf köz 2.</lakcim>
+        </eloado>
+        <datum>2024-07-20</datum>
+    </konferencia>
+
+    <konferencia id="konf_9" type="konferencia">
+        <cim>Technológiai Innováció Konferencia</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>Tamás</nev>
+                <lakcim>Szolnok, Mérnök utca 9.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Szolnoki Technológiai Park</helyszin>
+        <eloado>
+            <nev>Dr. Horváth</nev>
+            <adoszam>890123456</adoszam>
+            <lakcim>Szolnok, Fejlesztő tér 5.</lakcim>
+        </eloado>
+        <datum>2024-08-12</datum>
+    </konferencia>
+
+    <konferencia id="konf_10" type="konferencia">
+        <cim>Oktatási Konferencia</cim>
+        <hallgatok>
+            <hallgato>
+                <nev>László</nev>
+                <lakcim>Miskolc, Tanár utca 12.</lakcim>
+            </hallgato>
+        </hallgatok>
+        <helyszin>Miskolci Egyetem</helyszin>
+        <eloado>
+            <nev>Prof. Szabó</nev>
+            <adoszam>901234567</adoszam>
+            <lakcim>Miskolc, Oktató tér 8.</lakcim>
+        </eloado>
+        <datum>2024-09-25</datum>
+    </konferencia>
+</UY5E1L_konferencia>
