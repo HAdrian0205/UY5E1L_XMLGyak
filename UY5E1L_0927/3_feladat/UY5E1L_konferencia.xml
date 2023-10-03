@@ -8,6 +8,18 @@
                 <nev>Péter</nev>
                 <lakcim>Budapest, Kossuth utca 5.</lakcim>
             </hallgato>
+            <hallgato>
+                <nev>László</nev>
+                <lakcim>Budapest, Deák utca 1.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Árpád</nev>
+                <lakcim>Budapest, Alkotmány utca 12.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Dániel</nev>
+                <lakcim>Budapest, Berzsenyi utca 4.</lakcim>
+            </hallgato>
         </hallgatok>
         <helyszin>Budapesti Egyetem</helyszin>
         <eloado>
@@ -24,6 +36,18 @@
             <hallgato>
                 <nev>Anna</nev>
                 <lakcim>Debrecen, Virág utca 3.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Béla</nev>
+                <lakcim>Debrecen, Arany János utca 24.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Károly</nev>
+                <lakcim>Debrecen, Ajtó utca 19.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Zsombor</nev>
+                <lakcim>Debrecen, Csalitos utca 11.</lakcim>
             </hallgato>
         </hallgatok>
         <helyszin>Debreceni Konferenciaközpont</helyszin>
@@ -42,6 +66,22 @@
                 <nev>Mária</nev>
                 <lakcim>Szeged, Képzőművész utca 2.</lakcim>
             </hallgato>
+            <hallgato>
+                <nev>Sára</nev>
+                <lakcim>Szeged, Czibula utca 1.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Szilveszter</nev>
+                <lakcim>Szeged, Diadal utca 12.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>György</nev>
+                <lakcim>Szeged, Gyémánt utca 15.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Pál</nev>
+                <lakcim>Szeged, Kece utca 4.</lakcim>
+            </hallgato>
         </hallgatok>
         <helyszin>Szegedi Művészeti Galéria</helyszin>
         <eloado>
@@ -58,6 +98,26 @@
             <hallgato>
                 <nev>Gábor</nev>
                 <lakcim>Pécs, Egészség utca 8.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Mihály</nev>
+                <lakcim>Pécs, Batsányi utca 11.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Krisztián</nev>
+                <lakcim>Pécs, Galamb utca 5.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Lajos</nev>
+                <lakcim>Pécs, Gém utca 1.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Tamás</nev>
+                <lakcim>Pécs, Kisdeindoli út 12.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Attila</nev>
+                <lakcim>Pécs, Sas utca 9.</lakcim>
             </hallgato>
         </hallgatok>
         <helyszin>Pécsi Kórház</helyszin>
@@ -76,6 +136,18 @@
                 <nev>Zoltán</nev>
                 <lakcim>Székesfehérvár, Vállalkozó utca 4.</lakcim>
             </hallgato>
+            <hallgato>
+                <nev>Sarolta</nev>
+                <lakcim>Székesfehérvár, Futrinka utca 2.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Balázs</nev>
+                <lakcim>Székesfehérvár, Kertalja utca 7.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Csenge</nev>
+                <lakcim>Székesfehérvár, Csalai út 16.</lakcim>
+            </hallgato>
         </hallgatok>
         <helyszin>Székesfehérvári Kongresszusi Központ</helyszin>
         <eloado>
@@ -92,6 +164,22 @@
             <hallgato>
                 <nev>Eszter</nev>
                 <lakcim>Győr, Tudós utca 1.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Eszter</nev>
+                <lakcim>Győr, Zsák utca 6.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Eszter</nev>
+                <lakcim>Győr, Ybl Miklós utca 13.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Eszter</nev>
+                <lakcim>Győr, Olimpia út 2.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Eszter</nev>
+                <lakcim>Győr, Páfrány utca 5.</lakcim>
             </hallgato>
         </hallgatok>
         <helyszin>Győri Tudományos Központ</helyszin>
@@ -110,6 +198,18 @@
                 <nev>Bence</nev>
                 <lakcim>Szombathely, Sport utca 6.</lakcim>
             </hallgato>
+            <hallgato>
+                <nev>Sándor</nev>
+                <lakcim>Szombathely, Káptalan utca 33.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>József</nev>
+                <lakcim>Szombathely, Retek utca 25.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Benedek</nev>
+                <lakcim>Szombathely, Tamási Áron utca 1.</lakcim>
+            </hallgato>
         </hallgatok>
         <helyszin>Szombathelyi Sportközpont</helyszin>
         <eloado>
@@ -126,6 +226,14 @@
             <hallgato>
                 <nev>Júlia</nev>
                 <lakcim>Eger, Szakács utca 7.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Gergely</nev>
+                <lakcim>Eger, Dobó István utca 18.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>István</nev>
+                <lakcim>Eger, Lovász utca 3.</lakcim>
             </hallgato>
         </hallgatok>
         <helyszin>Egri Gasztronómiai Iskola</helyszin>
@@ -144,6 +252,30 @@
                 <nev>Tamás</nev>
                 <lakcim>Szolnok, Mérnök utca 9.</lakcim>
             </hallgato>
+            <hallgato>
+                <nev>Piroska</nev>
+                <lakcim>Szolnok, Kossuth Lajos út 4.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Ferenc</nev>
+                <lakcim>Szolnok, Odú utca 12.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Roland</nev>
+                <lakcim>Szolnok, Dobos Károly utca 16.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Szilvia</nev>
+                <lakcim>Szolnok, Ady Endre út 11.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Kinga</nev>
+                <lakcim>Szolnok, Horgász utca 25.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Boglárka</nev>
+                <lakcim>Szolnok, Mozdony utca 21.</lakcim>
+            </hallgato>
         </hallgatok>
         <helyszin>Szolnoki Technológiai Park</helyszin>
         <eloado>
@@ -158,13 +290,21 @@
         <cim>Oktatási Konferencia</cim>
         <hallgatok>
             <hallgato>
-                <nev>László</nev>
+                <nev>Adrián</nev>
                 <lakcim>Miskolc, Tanár utca 12.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Gábor</nev>
+                <lakcim>Miskolc, Kiss Ernő utca 19.</lakcim>
+            </hallgato>
+            <hallgato>
+                <nev>Bence</nev>
+                <lakcim>Miskolc, Kóbor János utca 3.</lakcim>
             </hallgato>
         </hallgatok>
         <helyszin>Miskolci Egyetem</helyszin>
         <eloado>
-            <nev>Prof. Szabó</nev>
+            <nev>Prof. Kovács</nev>
             <adoszam>901234567</adoszam>
             <lakcim>Miskolc, Oktató tér 8.</lakcim>
         </eloado>
