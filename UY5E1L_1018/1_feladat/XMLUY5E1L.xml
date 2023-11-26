@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="XMLSchemaUY5E1L.xsd">
+    <fesztivalok>
+        <fesztival FESZ_ID="1">
+            <nev>Kis fesztivál</nev>
+            <helyszin>Mezőzombor</helyszin>
+            <ev>2024</ev>
+        </fesztival>
+        <fesztival FESZ_ID="2">
+            <nev>Nagy fesztivál</nev>
+            <helyszin>Miskolc</helyszin>
+            <ev>2024</ev>
+        </fesztival>
+        <fesztival FESZ_ID="3">
+            <nev>Király fesztivál</nev>
+            <helyszin>Eger</helyszin>
+            <ev>2025</ev>
+        </fesztival>
+    </fesztivalok>
+    
+    <tulajdonosok>
+        <tulajdonos T_ID="1">
+            <nev>Nagy Lajos</nev>
+            <adoszam>9123421123</adoszam>
+            <alapitas>1992</alapitas>
+            <bevetel>250000000</bevetel>
+        </tulajdonos>
+        <tulajdonos T_ID="2">
+            <nev>Kis István</nev>
+            <adoszam>9482716482</adoszam>
+            <alapitas>2001</alapitas>
+            <bevetel>800000000</bevetel>
+        </tulajdonos>
+    </tulajdonosok>
+
+    <fellepok>
+        <fellepo FEL_ID="1">
+            <nev>DJ Bandi</nev>
+            <orszag>Magyarország</orszag>
+            <dij>12000</dij>
+        </fellepo>
+        <fellepo FEL_ID="2">
+            <nev>Carlos Rodriguez</nev>
+            <orszag>Mexikó</orszag>
+            <dij>25000</dij>
+        </fellepo>
+        <fellepo FEL_ID="3">
+            <nev>Nagaszaki Hiroshima</nev>
+            <orszag>Japán</orszag>
+            <dij>20000</dij>
+        </fellepo>
+    </fellepok>
+
+    <resztvevok>
+        <resztvevo R_ID="1">
+            <nev>Nyúl Béla</nev>
+            <lakcim>
+                <telepules>Eger</telepules>
+                <utca>Deák Ferenc út</utca>
+                <hazszam>15</hazszam>
+            </lakcim>
+        </resztvevo>
+        <resztvevo R_ID="2">
+            <nev>Baksy Tamás</nev>
+            <diakigazolvany>DI93281</diakigazolvany>
+            <lakcim>
+                <telepules>Miskolc</telepules>
+                <utca>Gyula utca</utca>
+                <hazszam>8</hazszam>
+            </lakcim>
+        </resztvevo>
+        <resztvevo R_ID="3">
+            <nev>Tóth Sándor</nev>
+            <diakigazolvany>DI98372</diakigazolvany>
+            <lakcim>
+                <telepules>Pálháza</telepules>
+                <utca>Petőfi út</utca>
+                <hazszam>2</hazszam>
+            </lakcim>
+        </resztvevo>
+    </resztvevok>
+
+    <nyelvtudasok>
+        <nyelvtudas NY_ID="1">
+            <nyelv>Magyar</nyelv>
+            <szint>Felsőfok</szint>
+        </nyelvtudas>
+        <nyelvtudas NY_ID="2">
+            <nyelv>Spanyol</nyelv>
+            <szint>Középfok</szint>
+        </nyelvtudas>
+        <nyelvtudas NY_ID="3">
+            <nyelv>Angol</nyelv>
+            <szint>Középfok</szint>
+        </nyelvtudas>
+    </nyelvtudasok>
+
+    <barok>
+        <bar B_ID="1">
+            <nev>Zöld Osztriga bár</nev>
+            <ital>Borsodi Sör</ital>
+            <ital>Vodka Martini</ital>
+            <ceg>Pia Kft.</ceg>
+        </bar>
+        <bar B_ID="2">
+            <nev>Lugas kocsma</nev>
+            <ital>Vilmos Körte</ital>
+            <ital>Abszint</ital>
+            <ital>Unicum</ital>
+            <ceg>Ital Kft.</ceg>
+        </bar>
+        <bar B_ID="3">
+            <nev>Sarki borozó</nev>
+            <ital>Vörös Bor</ital>
+            <ital>Fehér Bor</ital>
+            <ceg>Koccintós Kft.</ceg>
+        </bar>
+        <bar B_ID="4">
+            <nev>Lux</nev>
+            <ital>Vörös Bor</ital>
+            <ital>Staropramen Sör</ital>
+            <ital>Abszint</ital>
+            <ital>Barack Pálinka</ital>
+            <ceg>Italozzunk Kft.</ceg>
+        </bar>
+    </barok>
+
+    <alkalmazottak>
+        <alkalmazott A_ID="1">
+            <nev>Török Imre</nev>
+            <muszak>12:00-24:00</muszak>
+            <fizetes>850000</fizetes>
+        </alkalmazott>
+        <alkalmazott A_ID="2">
+            <nev>Orovecz Tibor</nev>
+            <muszak>06:00-18:00</muszak>
+            <fizetes>790000</fizetes>
+        </alkalmazott>
+        <alkalmazott A_ID="3">
+            <nev>Péter Árpád</nev>
+            <muszak>16:00-04:00</muszak>
+            <fizetes>1200000</fizetes>
+        </alkalmazott>
+    </alkalmazottak>
+
+    <kapcsolatok>
+        <kapcsolat ID="1">
+            <nev>FEL_FESZ</nev>
+        </kapcsolat>
+        <kapcsolat ID="2">
+            <nev>B_A</nev>
+        </kapcsolat>
+        <kapcsolat ID="3" K_ID="1">
+            <nev>kozvelemeny</nev>
+            <kerdezo>Horváth Károly</kerdezo>
+        </kapcsolat>
+        <kapcsolat ID="4" K_ID="2">
+            <nev>kozvelemeny</nev>
+            <kerdezo>Tóth Péter</kerdezo>
+        </kapcsolat>
+        <kapcsolat ID="5">
+            <nev>FESZ_T</nev>
+        </kapcsolat>
+        <kapcsolat ID="6">
+            <nev>FESZ_R</nev>
+        </kapcsolat>
+        <kapcsolat ID="7">
+            <nev>FESZ_B</nev>
+        </kapcsolat>
+    </kapcsolatok>
+</data>
