@@ -1,0 +1,106 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- egyszerű típusok (saját) -->
+    <xs:simpleType name="jovahagyTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="igen" />
+            <xs:enumeration value="nem" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idTipus">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="30" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="nyelvTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="magyar" />
+            <xs:enumeration value="angol" />
+            <xs:enumeration value="német" />
+            <xs:enumeration value="orosz" />
+            <xs:enumeration value="kínai" />
+            <xs:enumeration value="spanyol" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="kreditTipus">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1" />
+            <xs:maxInclusive value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="szakTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Programtervező informatikus" />
+            <xs:enumeration value="Mérnökinformatikus" />
+            <xs:enumeration value="Gazdaságinformatikus" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- gyökér -->
+    
+    <xs:attribute name="tanev" />
+
+    <!-- hallgato -->
+    <xs:element name="hnev" type="xs:string" />
+    <xs:element name="szulev" type="xs:string" />
+    <xs:element name="szak" type="szakTipus" />
+
+    <xs:attribute name="evf" type="xs:string" />
+
+    <!-- kurzus -->
+    <xs:element name="kurzusnev" type="xs:string" />
+    <xs:element name="kredit" type="kreditTipus" />
+    <xs:element name="hely" type="xs:string" />
+    <xs:element name="idopont" type="xs:string" />
+    <xs:element name="oktato" type="xs:string" />
+
+    <xs:attribute name="id" type="idTipus" />
+    <xs:attribute name="nyelv" type="nyelvTipus" />
+    <xs:attribute name="jovahagyas" type="jovahagyTipus" />
+
+    <xs:element name="UY5E1L_kurzusfelvetel">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="hallgato">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="hnev" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="szulev" minOccurs="0" maxOccurs="1"/>
+                            <xs:element ref="szak" minOccurs="0" maxOccurs="1" />
+                        </xs:sequence>
+                        <xs:attribute ref="evf" />
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="kurzusok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="kurzus" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="kurzusnev" />
+                                        <xs:element ref="kredit" />
+                                        <xs:element ref="hely" />
+                                        <xs:element ref="idopont" />
+                                        <xs:element ref="oktato" />
+                                    </xs:sequence>
+                                    <xs:attribute ref="id" />
+                                    <xs:attribute ref="nyelv" />
+                                    <xs:attribute ref="jovahagyas"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType> 
+    </xs:element>
+
+</xs:schema>
