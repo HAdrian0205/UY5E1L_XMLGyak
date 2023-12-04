@@ -84,18 +84,18 @@ public class DOMWriteUY5E1L {
 			createShipper(doc, root, "5", "VelocityFreight", "+36703337788", "55", "3300", "Eger", "Eperjesi utca", "8");
 			
 		    //Mentés fájlba
-		    TransformerFactory transformerFactory = TransformerFactory.newInstance();
-		    Transformer transformer = transformerFactory.newTransformer();
-		    transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
-		    transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-		    transformer.setOutputProperty("{https://xml.apache.org/xslt}indent-amount", "2");
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
+			transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
+			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+			transformer.setOutputProperty("{https://xml.apache.org/xslt}indent-amount", "2");
 		    
-		    DOMSource source = new DOMSource(doc);
-		    File outputFile = new File("src/hu/domparse/uy5e1l/XMLUY5E1LWrite.xml");
-		    StreamResult file = new StreamResult(outputFile);
-		    transformer.transform(source, file);
-		    StreamResult console = new StreamResult(System.out);
-		    transformer.transform(source, console);
+			DOMSource source = new DOMSource(doc);
+			File outputFile = new File("src/hu/domparse/uy5e1l/XMLUY5E1LWrite.xml");
+			StreamResult file = new StreamResult(outputFile);
+			transformer.transform(source, file);
+			StreamResult console = new StreamResult(System.out);
+			transformer.transform(source, console);
 	    } catch (ParserConfigurationException | TransformerException e) {
 	         e.printStackTrace();
 	    }
