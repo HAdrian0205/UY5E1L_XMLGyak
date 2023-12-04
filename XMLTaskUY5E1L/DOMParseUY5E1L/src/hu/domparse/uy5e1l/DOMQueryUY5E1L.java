@@ -197,6 +197,8 @@ public class DOMQueryUY5E1L {
 				}
 			}
 		
+			System.out.println();
+			
 			//Minden olyan termék adatai, amelyből már 3-nál több darabot rendeltek
 			System.out.println("5. Lekérdezés:");
 			System.out.println("--------------");
@@ -227,7 +229,7 @@ public class DOMQueryUY5E1L {
 				
 				if(productAmountMap.containsKey(productID)) {
 					if(productAmountMap.get(productID) > 3) {
-						System.out.println(counter + ". Termék (ID:" + productID +")");
+						System.out.println(counter + ". Termék (ID:" + productID +", Rendelések száma: " + productAmountMap.get(productID) + ")");
 						System.out.println("\tNeve: " + product.getElementsByTagName("nev").item(0).getTextContent());
 						System.out.println("\tÁra: " + product.getElementsByTagName("ar").item(0).getTextContent());
 						
