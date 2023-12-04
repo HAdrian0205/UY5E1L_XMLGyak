@@ -3,7 +3,9 @@ package hu.domparse.uy5e1l;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -194,8 +196,45 @@ public class DOMQueryUY5E1L {
 					}
 				}
 			}
+		
+			//Minden olyan termék adatai, amelyből már 3-nál több darabot rendeltek
+			System.out.println("5. Lekérdezés:");
+			System.out.println("--------------");
 			
+			Map<String, Integer> productAmountMap = new HashMap<>();
 			
+			System.out.println("Termékek, melyekből 3-nál több darabot rendeltek:\n");
+			
+			for(int i = 0; i < orderedProductList.getLength(); i++) {
+				Element orderedProduct = (Element) orderedProductList.item(i);
+				String productFkey = orderedProduct.getAttribute("termekid");
+				int amount = Integer.parseInt(orderedProduct.getElementsByTagName("mennyiseg").item(0).getTextContent());
+				
+				if(!productAmountMap.containsKey(productFkey)) {
+					productAmountMap.put(productFkey, amount);
+				} else {
+					int tempAmount = productAmountMap.get(productFkey);
+					tempAmount += amount;
+					productAmountMap.put(productFkey, tempAmount);
+				}
+			}
+			
+			counter = 1;
+			
+			for(int i = 0; i < productList.getLength(); i++) {
+				Element product = (Element) productList.item(i);
+				String productID = product.getAttribute("termekid");
+				
+				if(productAmountMap.containsKey(productID)) {
+					if(productAmountMap.get(productID) > 3) {
+						System.out.println(counter + ". Termék (ID:" + productID +")");
+						System.out.println("\tNeve: " + product.getElementsByTagName("nev").item(0).getTextContent());
+						System.out.println("\tÁra: " + product.getElementsByTagName("ar").item(0).getTextContent());
+						
+						counter++;
+					}
+				}
+			}
 		} catch(ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
