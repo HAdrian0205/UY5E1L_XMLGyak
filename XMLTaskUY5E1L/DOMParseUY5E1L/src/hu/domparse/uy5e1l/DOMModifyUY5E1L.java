@@ -32,16 +32,15 @@ public class DOMModifyUY5E1L {
 			modifyDocument(doc);
 			
 			// Módosított fájl mentése
-            TransformerFactory transformerFactory = TransformerFactory.newInstance();
-            Transformer transformer = transformerFactory.newTransformer();
-            DOMSource source = new DOMSource(doc); 
-            StreamResult result = new StreamResult(new File("src/hu/domparse/uy5e1l/modositott_xml.xml"));
-            transformer.transform(source, result);
+			TransformerFactory transformerFactory = TransformerFactory.newInstance();
+			Transformer transformer = transformerFactory.newTransformer();
+			DOMSource source = new DOMSource(doc); 
+			StreamResult result = new StreamResult(new File("src/hu/domparse/uy5e1l/modositott_xml.xml"));
+			transformer.transform(source, result);
             
-            //Console-ra való kiíratás
-            StreamResult resultConsole = new StreamResult(System.out);
-            transformer.transform(source, resultConsole);
-			
+			//Console-ra való kiíratás
+			StreamResult resultConsole = new StreamResult(System.out);
+			transformer.transform(source, resultConsole);
 		} catch(TransformerException | ParserConfigurationException | SAXException | IOException e) {
 			e.printStackTrace();
 		}
