@@ -110,7 +110,7 @@ public class DOMQueryUY5E1L {
 			
 			System.out.println();
 			
-			//Minden olyan ügyfél adata, akihez nem tartozik rendelés
+			//Minden olyan ügyfél adatai, akihez nem tartozik rendelés
 			System.out.println("3. Lekérdezés:");
 			System.out.println("--------------");
 			
