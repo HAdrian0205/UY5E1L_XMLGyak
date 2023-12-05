@@ -151,7 +151,7 @@ public class DOMQueryUY5E1L {
 				}
 			}
 			
-			//A szállítók adatai, akik szállítanak 3-as idjű terméket szállítanak/szállítottak
+			//A szállítók adatai, akik 3-mas idjű terméket szállítanak/szállítottak
 			System.out.println("4. Lekérdezés:");
 			System.out.println("--------------");
 			
