@@ -24,6 +24,8 @@ public class DOMModifyUY5E1L {
 		File inputFile = new File("src/hu/domparse/uy5e1l/XMLTaskUY5E1L.xml");
 		
 		try {
+			
+			//Document létrehozása
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder domBuilder = dbFactory.newDocumentBuilder();
 			Document doc = domBuilder.parse(inputFile);

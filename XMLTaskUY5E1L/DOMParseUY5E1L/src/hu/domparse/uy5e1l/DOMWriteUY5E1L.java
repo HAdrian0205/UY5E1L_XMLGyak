@@ -30,7 +30,7 @@ public class DOMWriteUY5E1L {
 			root.setAttribute("xs:noNamespaceSchemaLocation", "XMLTaskUY5E1L.xsd");
 			doc.appendChild(root);
 		    
-			//Ügyfél hozzáadása
+			//Ügyfelek hozzáadása
 			root.appendChild(doc.createComment("Ügyfelek"));
 			createCustomer(doc, root, "1", "Nagy", "Zsófia", "1122", "Budapest", "Rózsavölgy ", "7", "+36201234567", 
 					"valami@example.com");
@@ -43,7 +43,7 @@ public class DOMWriteUY5E1L {
 			createCustomer(doc, root, "5", "Horváth", "Viktória", "9027", "Győr", "Búzavirág utca", "33", "+36703337788", 
 					"valami@example.com");
 			
-			//Ügy-Re kapcsolat hozzáadása
+			//Ügy-Re kapcsolatok hozzáadása
 			root.appendChild(doc.createComment("Ügy-Re kapcsolótábla"));
 			createCustomerOrderRelationship(doc, root, "1", "2", "1", "Szeretném, ha SOS ideérne a csomagom!");
 			createCustomerOrderRelationship(doc, root, "2", "3", "5", "Pénteken nem vagyok otthon!");
@@ -51,7 +51,7 @@ public class DOMWriteUY5E1L {
 			createCustomerOrderRelationship(doc, root, "4", "5", "4", "A csengő nem működik!");
 			createCustomerOrderRelationship(doc, root, "5", "4", "3", "A kutya nem harap! Jöjjön be nyugodtan!");
 			
-			//Rendelés hozzáadása
+			//Rendelések hozzáadása
 			root.appendChild(doc.createComment("Rendelések"));
 			createOrder(doc, root, "1", "aktív", "online", "2", "5", "214.68", "2023-12-04");
 			createOrder(doc, root, "2", "teljesítve", "online", "1", "2", "2049.98", "2023-12-01");
@@ -59,7 +59,7 @@ public class DOMWriteUY5E1L {
 			createOrder(doc, root, "4", "aktív", "online", "5", "3", "6464.96", "2023-12-04");
 			createOrder(doc, root, "5", "fizetésre vár", "online", "3", "1", "1044.99", "2023-12-03");
 			
-			//Rendelt termék létrehozása
+			//Rendelt termékek létrehozása
 			root.appendChild(doc.createComment("Rendelt Termékek"));
 			createOrderedProduct(doc, root, "1", "4", "3", "1199.99", "27%", "3");
 			createOrderedProduct(doc, root, "2", "2", "5", "999.99", "27%", "1");
@@ -67,7 +67,7 @@ public class DOMWriteUY5E1L {
 			createOrderedProduct(doc, root, "4", "3", "1", "4.99", "27%", "32");
 			createOrderedProduct(doc, root, "5", "2", "2", "999.99", "27%", "2");
 			
-			//Termék hozzáadása
+			//Termékek hozzáadása
 			root.appendChild(doc.createComment("Termékek"));
 			createProduct(doc, root, "1", "igen", "Logitech MX Master 3S Egér", "459.99");
 			createProduct(doc, root, "2", "igen", "QuantumTech Okosóra", "999.99");
@@ -75,7 +75,7 @@ public class DOMWriteUY5E1L {
 			createProduct(doc, root, "4", "igen", "Gyorsfőző Pizza Sütő", "1199.99");
 			createProduct(doc, root, "5", "igen", "Kényelmi Zóna Masszázsfotel", "1599.99");
 			
-			//Szállító hozzáadása
+			//Szállítók hozzáadása
 			root.appendChild(doc.createComment("Szállítók"));
 			createShipper(doc, root, "1", "ExpressMove Logistics", "+36201234567", "45", "1037", "Budapest", "Montevideo utca", "14");
 			createShipper(doc, root, "2", "RapidCargo Solutions", "+36309876543", "50", "3529", "Miskolc", "Alkotmány utca", "3");
@@ -83,17 +83,20 @@ public class DOMWriteUY5E1L {
 			createShipper(doc, root, "4", "PrimeTransit Services", "+36308765432", "40", "1132", "Budapest", "Váci út", "45");
 			createShipper(doc, root, "5", "VelocityFreight", "+36703337788", "55", "3300", "Eger", "Eperjesi utca", "8");
 			
-			//Mentés fájlba
+			//Transformer létrehozása, majd beállítások elvégzése
 			TransformerFactory transformerFactory = TransformerFactory.newInstance();
 			Transformer transformer = transformerFactory.newTransformer();
 			transformer.setOutputProperty(OutputKeys.ENCODING, "UTF-8");
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 			transformer.setOutputProperty("{https://xml.apache.org/xslt}indent-amount", "2");
 		    
+			//Kiíratás fájlba
 			DOMSource source = new DOMSource(doc);
 			File outputFile = new File("src/hu/domparse/uy5e1l/XMLUY5E1LWrite.xml");
 			StreamResult file = new StreamResult(outputFile);
 			transformer.transform(source, file);
+			
+			//Kiíratás konzolra
 			StreamResult console = new StreamResult(System.out);
 			transformer.transform(source, console);
 	    } catch (ParserConfigurationException | TransformerException e) {
@@ -104,6 +107,7 @@ public class DOMWriteUY5E1L {
 	public static void createCustomer(Document doc, Element root, String ugyfelid, String vezeteknev, String keresztnev, String iranyitoszam, String varos,
 			String kozterneve, String hazszam, String telefonszam, String email) {
 		
+		//Elementek létrehozása (ahol szükséges értékkel együtt), attribútum(ok) csatolása értékkel együtt
 		Element customer = doc.createElement("ugyfel");
 		customer.setAttribute("ugyfelid", ugyfelid);
 		
@@ -120,6 +124,7 @@ public class DOMWriteUY5E1L {
 		Element phoneNumber = createElementWithValue(doc, "telefonszam", telefonszam);
 		Element emailAddress = createElementWithValue(doc, "email", email);
 		
+		//Struktúra összeállítása 
 		name.appendChild(lastName);
 		name.appendChild(firstName);
 		
@@ -133,12 +138,14 @@ public class DOMWriteUY5E1L {
 		customer.appendChild(phoneNumber);
 		customer.appendChild(emailAddress);
 		
+		//A létrehozott struktúra hozzáadása a gyökérhez
 		root.appendChild(customer);
 	}
 	
 	public static void createCustomerOrderRelationship(Document doc, Element root, String megjegyzesid, String ugyfelid, 
 			String rendelesid, String megjegyzes) {
 		
+		//Elementek létrehozása (ahol szükséges értékkel együtt), attribútum(ok) csatolása értékkel együtt
 		Element relationship = doc.createElement("ugyre");
 		relationship.setAttribute("megjegyzesid", megjegyzesid);
 		relationship.setAttribute("ugyfelid", ugyfelid);
@@ -146,14 +153,17 @@ public class DOMWriteUY5E1L {
 		
 		Element comment = createElementWithValue(doc, "megjegyzes", megjegyzes);
 		
+		//Struktúra összeállítása
 		relationship.appendChild(comment);
 		
+		//A létrehozott struktúra hozzáadása a gyökérhez
 		root.appendChild(relationship);
 	}
 	
 	public static void createOrder(Document doc, Element root, String rendelesid, String statusz, 
 			String fizetestipusa, String ugyfelid, String szallitoid, String osszeg, String datum) {
 		
+		//Elementek létrehozása (ahol szükséges értékkel együtt), attribútum(ok) csatolása értékkel együtt
 		Element order = doc.createElement("rendeles");
 		order.setAttribute("rendelesid", rendelesid);
 		order.setAttribute("statusz", statusz);
@@ -164,15 +174,18 @@ public class DOMWriteUY5E1L {
 		Element amount = createElementWithValue(doc, "osszeg", osszeg);
 		Element orderDate = createElementWithValue(doc, "datum", datum);
 		
+		//Struktúra összeállítása
 		order.appendChild(amount);
 		order.appendChild(orderDate);
 		
+		//A létrehozott struktúra hozzáadása a gyökérhez
 		root.appendChild(order);
 	}
 	
 	public static void createOrderedProduct(Document doc, Element root, String rendelttermekid, String termekid, String rendelesid,
 			String egysegar, String afa, String mennyiseg) {
 		
+		//Elementek létrehozása (ahol szükséges értékkel együtt), attribútum(ok) csatolása értékkel együtt
 		Element orderedProduct = doc.createElement("rendelttermek");
 		orderedProduct.setAttribute("rendelttermekid", rendelttermekid);
 		orderedProduct.setAttribute("termekid", termekid);
@@ -182,15 +195,18 @@ public class DOMWriteUY5E1L {
 		Element vat = createElementWithValue(doc, "afa", afa);
 		Element amount = createElementWithValue(doc, "mennyiseg", mennyiseg);
 		
+		//Struktúra összeállítása
 		orderedProduct.appendChild(unitPrice);
 		orderedProduct.appendChild(vat);
 		orderedProduct.appendChild(amount);
 		
+		//A létrehozott struktúra hozzáadása a gyökérhez
 		root.appendChild(orderedProduct);
 	}
 	
 	public static void createProduct(Document doc, Element root, String termekid, String akcios, String nev, String ar) {
 		
+		//Elementek létrehozása (ahol szükséges értékkel együtt), attribútum(ok) csatolása értékkel együtt
 		Element product = doc.createElement("termek");
 		product.setAttribute("termekid", termekid);
 		product.setAttribute("akcios", akcios);
@@ -198,15 +214,18 @@ public class DOMWriteUY5E1L {
 		Element name = createElementWithValue(doc, "nev", nev);
 		Element price = createElementWithValue(doc, "ar", ar);
 		
+		//Struktúra összeállítása
 		product.appendChild(name);
 		product.appendChild(price);
 		
+		//A létrehozott struktúra hozzáadása a gyökérhez
 		root.appendChild(product);
 	}
 	
 	public static void createShipper(Document doc, Element root, String szallitoid, String nev, String telefonszam, String szallitasiar,
 			String iranyitoszam, String varos, String kozterneve, String hazszam) {
 		
+		//Elementek létrehozása (ahol szükséges értékkel együtt), attribútum(ok) csatolása értékkel együtt
 		Element shipper = doc.createElement("szallito");
 		shipper.setAttribute("szallitoid", szallitoid);
 		
@@ -220,6 +239,7 @@ public class DOMWriteUY5E1L {
 		Element street = createElementWithValue(doc, "kozterneve", kozterneve);
 		Element houseNumber = createElementWithValue(doc, "hazszam", hazszam);
 		
+		//Struktúra összeállítása
 		headQuarters.appendChild(postalCode);
 		headQuarters.appendChild(city);
 		headQuarters.appendChild(street);
@@ -230,13 +250,17 @@ public class DOMWriteUY5E1L {
 		shipper.appendChild(shippingFee);
 		shipper.appendChild(headQuarters);
 		
+		//A létrehozott struktúra hozzáadása a gyökérhez
 		root.appendChild(shipper);
 	}
 	
 	public static Element createElementWithValue(Document doc, String elementName, String elementValue) {
+		//Element létrehozása
 		Element elementWithValue = doc.createElement(elementName);
+		//Az elementhez hozzáadunk egy text node-ot, ami az értéke lesz
 		elementWithValue.appendChild(doc.createTextNode(elementValue));
 		
+		//A metódus visszaadja az elementet az értékével együtt
 		return elementWithValue;
 	}
 }

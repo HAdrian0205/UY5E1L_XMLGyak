@@ -67,10 +67,13 @@ public class DOMReadUY5E1L {
 			//Kiíratás consolre-ra és fájlba
 			try {
 				
+				//Létrehozom a FileWritert
 				FileWriter writer = new FileWriter("src/hu/domparse/uy5e1l/XMLTaskUY5E1LOutput.xml");
 				
+				//Létrehozom a BufferedWritert a FileWriterre
 				BufferedWriter buffWriter = new BufferedWriter(writer);
 				
+				//A listából a ciklussal kiíratom a képernyőre a sorokat, majd fájlba
 				for(String line : allLines) {
 					System.out.print(line);
 					buffWriter.write(line);
