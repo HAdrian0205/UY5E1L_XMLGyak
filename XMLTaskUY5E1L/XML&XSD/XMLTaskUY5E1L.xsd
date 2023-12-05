@@ -47,11 +47,41 @@
         </xs:restriction>
     </xs:simpleType>
     
+    <!-- Elementek -->
 
+    <!-- Ügyfél (+cím adatok a szállítónál is) -->
+    <xs:element name="vezeteknev" type="xs:string" />
+    <xs:element name="keresztnev" type="xs:string" />
+    <xs:element name="iranyitoszam" type="xs:int" />
+    <xs:element name="varos" type="xs:string" />
+    <xs:element name="kozterneve" type="xs:string" />
+    <xs:element name="hazszam" type="xs:int" />
+    <xs:element name="telefonszam" type="telszamTipus" />
+    <xs:element name="email" type="emailTipus" />
+
+    <!-- Ügy-Re -->
+    <xs:element name="megjegyzes" type="xs:string" />
+
+    <!-- Rendelés -->
+    <xs:element name="osszeg" type="xs:float" />
+    <xs:element name="datum" type="xs:date" />
+
+    <!-- Rendelt Termék -->
+    <xs:element name="egysegar" type="xs:float" />
+    <xs:element name="afa" type="afaTipus" />
+    <xs:element name="mennyiseg" type="xs:int" />
+
+    <!-- Termék (+a név a szállítónál is) -->
+    <xs:element name="nev" type="xs:string" />
+    <xs:element name="ar" type="xs:float" />
+
+    <!-- Szállító -->
+    <xs:element name="szallitasiar" />
+
+    <!-- Struktúra megadása -->
     <xs:element name="webshop">
         <xs:complexType>
             <xs:sequence>
-                <!-- Entity elementek -->
 
                 <!-- Ügyfelek -->
                 <xs:element name="ugyfel" minOccurs="1" maxOccurs="unbounded">
@@ -60,47 +90,71 @@
                             <xs:element name="nev" minOccurs="1" maxOccurs="1">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="vezeteknev" type="xs:string" minOccurs="1" maxOccurs="1" />
-                                        <xs:element name="keresztnev" type="xs:string" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="vezeteknev" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="keresztnev" minOccurs="1" maxOccurs="1" />
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
+
                             <xs:element name="lakcim" minOccurs="1" maxOccurs="1">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="iranyitoszam" type="xs:int" minOccurs="1" maxOccurs="1" />
-                                        <xs:element name="varos" type="xs:string" minOccurs="0" maxOccurs="1" />
-                                        <xs:element name="kozterneve" type="xs:string" minOccurs="1" maxOccurs="1" />
-                                        <xs:element name="hazszam" type="xs:int" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="iranyitoszam" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="varos" minOccurs="0" maxOccurs="1" />
+                                        <xs:element ref="kozterneve" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="hazszam" minOccurs="1" maxOccurs="1" />
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="telefonszam" type="telszamTipus" minOccurs="1" maxOccurs="1" />
-                            <xs:element name="email" type="emailTipus" minOccurs="1" maxOccurs="1" />
+
+                            <xs:element ref="telefonszam" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="email" minOccurs="1" maxOccurs="1" />
                         </xs:sequence>
                         <xs:attribute name="ugyfelid" type="xs:int" use="required" />
                     </xs:complexType>
+
+                    <!-- Ügyfél ID (kulcs) -->
+                    <xs:key name="ugyfel_key">
+                        <xs:selector xpath="ugyfel"></xs:selector>
+                        <xs:field xpath="@ugyfelid"></xs:field>
+                    </xs:key>
                 </xs:element>
                 
                 <!-- Kapcsolótábla (Ügy-Re) -->
-
                 <xs:element name="ugyre" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="megjegyzes" type="xs:string" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="megjegyzes" minOccurs="1" maxOccurs="1" />
                         </xs:sequence>
                         <xs:attribute name="megjegyzesid" type="xs:int" use="required" />
                         <xs:attribute name="ugyfelid" type="xs:int" use="required" />
                         <xs:attribute name="rendelesid" type="xs:int" use="required" />
                     </xs:complexType>
+
+                    <!-- Megjegyzés ID (kulcs) -->
+                    <xs:key name="megjegyzes_key">
+                        <xs:selector xpath="ugyre"></xs:selector>
+                        <xs:field xpath="@megjegyzesid"></xs:field>
+                    </xs:key>
+
+                    <!-- Megjegyzés idegen kulcsok -->
+                    <xs:keyref name="ugyre_ugyfel_fkey" refer="ugyfel_key">
+                        <xs:selector xpath="megjegyzes"></xs:selector>
+                        <xs:field xpath="@ugyfelid"></xs:field>
+                    </xs:keyref>
+
+                    <xs:keyref name="ugyre_rendeles_fkey" refer="rendeles_key">
+                        <xs:selector xpath="megjegyzes"></xs:selector>
+                        <xs:field xpath="@ugyfelid"></xs:field>
+                    </xs:keyref>
                 </xs:element>
 
                 <!-- Rendelések  -->
                 <xs:element name="rendeles" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="osszeg" type="xs:float" minOccurs="1" maxOccurs="1" />
-                            <xs:element name="datum" type="xs:date" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="osszeg" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="datum" minOccurs="1" maxOccurs="1" />
                         </xs:sequence>
                         <xs:attribute name="rendelesid" type="xs:int" use="required" />
                         <xs:attribute name="statusz" type="statuszTipus" use="required" />
@@ -108,54 +162,100 @@
                         <xs:attribute name="ugyfelid" type="xs:int" use="required" />
                         <xs:attribute name="szallitoid" type="xs:int" use="required" />
                     </xs:complexType>
+
+                    <!-- Rendelés ID (kulcs) -->
+                    <xs:key name="rendeles_key">
+                        <xs:selector xpath="rendeles"></xs:selector>
+                        <xs:field xpath="@rendelesid"></xs:field>
+                    </xs:key>
+
+                    <!-- Rendelés idegen kulcsok -->
+                    <xs:keyref name="rendeles_ugyfel_fkey" refer="ugyfel_key">
+                        <xs:selector xpath="rendeles"></xs:selector>
+                        <xs:field xpath="@ugyfelid"></xs:field>
+                    </xs:keyref>
+                    
+                    <xs:keyref name="rendeles_szallito_fkey" refer="szallito_key">
+                        <xs:selector xpath="rendeles"></xs:selector>
+                        <xs:field xpath="@szallitoid"></xs:field>
+                    </xs:keyref>
                 </xs:element>
 
                 <!-- Rendelt Termékek -->
                 <xs:element name="rendelttermek" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="egysegar" type="xs:float" minOccurs="1" maxOccurs="1" />
-                            <xs:element name="afa" type="afaTipus" minOccurs="1" maxOccurs="1" />
-                            <xs:element name="mennyiseg" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="egysegar" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="afa" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="mennyiseg" maxOccurs="1" />
                         </xs:sequence>
                         <xs:attribute name="rendelttermekid" type="xs:int" use="required" />
                         <xs:attribute name="termekid" type="xs:int" use="required" />
                         <xs:attribute name="rendelesid" type="xs:int" use="required" />
                     </xs:complexType>
+
+                    <!-- Rendelés ID (kulcs) -->
+                    <xs:key name="rendelttermek_key">
+                        <xs:selector xpath="rendelttermek"></xs:selector>
+                        <xs:field xpath="@rendelttermekid"></xs:field>
+                    </xs:key>
+
+                    <!-- Rendelt Termék idegen kulcsok -->
+                    <xs:keyref name="rendelttermek_termek_fkey" refer="termek_key">
+                        <xs:selector xpath="rendelttermek"></xs:selector>
+                        <xs:field xpath="@termekid"></xs:field>
+                    </xs:keyref>
+
+                    <xs:keyref name="rendelttermek_rendeles_fkey" refer="rendeles_key">
+                        <xs:selector xpath="rendelttermek"></xs:selector>
+                        <xs:field xpath="@rendelesid"></xs:field>
+                    </xs:keyref>
                 </xs:element>
 
                 <!-- Termékek -->
                 <xs:element name="termek" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="nev" type="xs:string" minOccurs="1" maxOccurs="1" />
-                            <xs:element name="ar" type="xs:float" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="nev" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="ar" minOccurs="1" maxOccurs="1" />
                         </xs:sequence>
                         <xs:attribute name="termekid" type="xs:int" use="required" />
                         <xs:attribute name="akcios" type="akcioTipus" use="required" />
                     </xs:complexType>
+
+                    <!-- Termék ID (kulcs) -->
+                    <xs:key name="termek_key">
+                        <xs:selector xpath="termek"></xs:selector>
+                        <xs:field xpath="@termekid"></xs:field>
+                    </xs:key>
                 </xs:element>
 
                 <!-- Szállító -->
                 <xs:element name="szallito" minOccurs="1" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="nev" type="xs:string" minOccurs="1" maxOccurs="1" />
-                            <xs:element name="telefonszam" type="telszamTipus" minOccurs="1" maxOccurs="1" />
-                            <xs:element name="szallitasiar" type="xs:float" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="nev" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="telefonszam" minOccurs="1" maxOccurs="1" />
+                            <xs:element ref="szallitasiar" minOccurs="1" maxOccurs="1" />
                             <xs:element name="kozpontcime">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="iranyitoszam" type="xs:integer" minOccurs="1" maxOccurs="1" />
-                                        <xs:element name="varos" type="xs:string" minOccurs="0" maxOccurs="1" />
-                                        <xs:element name="kozterneve" type="xs:string" minOccurs="1" maxOccurs="1" />
-                                        <xs:element name="hazszam" type="xs:integer" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="iranyitoszam" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="varos" minOccurs="0" maxOccurs="1" />
+                                        <xs:element ref="kozterneve" minOccurs="1" maxOccurs="1" />
+                                        <xs:element ref="hazszam" minOccurs="1" maxOccurs="1" />
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
                         <xs:attribute name="szallitoid" type="xs:int" use="required" />
                     </xs:complexType>
+                    
+                    <!-- Szállító ID (kulcs) -->
+                    <xs:key name="szallito_key">
+                        <xs:selector xpath="szallito"></xs:selector>
+                        <xs:field xpath="@szallitoid"></xs:field>
+                    </xs:key>
                 </xs:element>
 
             </xs:sequence>
