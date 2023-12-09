@@ -1,0 +1,149 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<!DOCTYPE UY5E1L_orarend SYSTEM "UY5E1L_orarend.dtd">
+
+<UY5E1L_orarend>
+    <ora id="id_001" type="ea">
+        <targy>Valószínűség-számítás</targy>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>A1/230</helyszin>
+        <oktato>Dr. Fegyverneki Sándor</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_002" type="ea">
+        <targy>WEB technológiák</targy>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszin>A1/305</helyszin>
+        <oktato>Agárdi Anita</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_003" type="gyak">
+        <targy>WEB technológiák</targy>
+        <idopont>
+            <nap>Hétfő</nap>
+            <tol>16</tol>
+            <ig>18</ig>
+        </idopont>
+        <helyszin>In/202</helyszin>
+        <oktato>Agárdi Anita</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_004" type="ea">
+        <targy>Mesterséges intelligencia alapjai</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>A1 XXXII. előadó</helyszin>
+        <oktato>Kunné Dr. Tamás Judit</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_005" type="ea">
+        <targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>12</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>A1 XXXII. előadó</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_006" type="ea">
+        <targy>Algoritmusok és vizsgálatuk</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszin>A1/320</helyszin>
+        <oktato>Dr. Házy Attila</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_007" type="gyak">
+        <targy>Algoritmusok és vizsgálatuk</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>16</tol>
+            <ig>18</ig>
+        </idopont>
+        <helyszin>A1/320</helyszin>
+        <oktato>Dr. Házy Attila</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_008" type="gyak">
+        <targy>Valószínűség-számítás</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>A1/312</helyszin>
+        <oktato>Dr. Túri József</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_009" type="gyak">
+        <targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>12</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>In/103</helyszin>
+        <oktato>Dr. Bednarik László</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_010" type="ea">
+        <targy>Vállalati információs rendszerek</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszin>In/101</helyszin>
+        <oktato>Dr. Sasvári Péter</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_011" type="gyak">
+        <targy>Vállalati információs rendszerek</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>18</tol>
+            <ig>20</ig>
+        </idopont>
+        <helyszin>In/103</helyszin>
+        <oktato>Dr. Sasvári Péter</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+
+    <ora id="id_012" type="gyak">
+        <targy>Mesterséges intelligencia alapjai</targy>
+        <idopont>
+            <nap>Csütörtök</nap>
+            <tol>10</tol>
+            <ig>12</ig>
+        </idopont>
+        <helyszin>A2 I. előadó</helyszin>
+        <oktato>Dr. Sasvári Péter</oktato>
+        <szak>Programtervező informatikus</szak>
+    </ora>
+</UY5E1L_orarend>

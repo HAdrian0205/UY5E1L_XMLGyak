@@ -1,0 +1,7 @@
+Tárgy id: id_001
+Óra típusa: ea
+Tárgy neve: Valószínûség-számítás
+Óra idõpontja: Hétfõ 10-12
+Óra helyszíne: A1/230
+Oktató neve: Dr. Fegyverneki Sándor
+Szak: Programtervezõ informatikus
