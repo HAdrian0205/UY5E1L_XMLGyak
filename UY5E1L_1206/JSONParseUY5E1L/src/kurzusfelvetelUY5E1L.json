@@ -1,0 +1,32 @@
+{
+    "UY5E1L_kurzusfelvetel": {
+      "hallgato": {
+        "hnev": "Béla",
+        "szulev": 2001,
+        "szak": "Programtervező informatikus"
+      },
+      "kurzus": [
+        {
+          "kurzusnev": "Adatkezelés XML-ben",
+          "kredit": 5,
+          "hely": "A1 XXXII. ea",
+          "idopont": "Kedd 14:00",
+          "oktato": "Dr. Bednarik László"
+        },
+        {
+          "kurzusnev": "Numerical and optimization methods",
+          "kredit": 5,
+          "hely": "A1/312",
+          "idopont": "Wednesday 10:00",
+          "oktato": "Dr. Házy Attila"
+        },
+        {
+          "kurzusnev": "Valószínűség-számítás",
+          "kredit": 5,
+          "hely": "A1/319",
+          "idopont": "Hétfő 10:00",
+          "oktato": "Dr. Fegyverneki Sándor"
+        }
+      ]
+    }
+  }
