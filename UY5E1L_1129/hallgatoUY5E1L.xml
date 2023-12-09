@@ -1,0 +1,27 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<?xml-stylesheet type="text/xsl" href="hallgatoUY5E1L.xsl"?>
+
+<class>
+    <student id = "01">
+        <vezeteknev>Kiss</vezeteknev>
+        <keresztnev>István</keresztnev>
+        <becenev>Pista</becenev>
+        <kor>22</kor>
+        <osztondij>20000</osztondij>
+    </student>
+    <student id = "02">
+        <vezeteknev>Nagy</vezeteknev>
+        <keresztnev>József</keresztnev>
+        <becenev>Joci</becenev>
+        <kor>21</kor>
+        <osztondij>32000</osztondij>
+    </student>
+    <student id = "03">
+        <vezeteknev>Tóth</vezeteknev>
+        <keresztnev>Péter</keresztnev>
+        <becenev>Petya</becenev>
+        <kor>21</kor>
+        <osztondij>18000</osztondij>
+    </student>
+</class>
