@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<UY5E1L_kurzusfelvetel xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+    xs:noNamespaceSchemaLocation="UY5E1L_kurzusfelvetel.xsd">
+
+    <hallgato evf="r_evfoly">
+        <hnev>Béla</hnev>
+        <szulev>2001</szulev>
+        <szak>Programtervező informatikus</szak>
+    </hallgato>
+    <kurzusok>
+        <kurzus id="1" nyelv="magyar">
+            <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A1 XXXII. ea</hely>
+            <idopont>Kedd 14:00</idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+        <kurzus id="2" nyelv="angol" jovahagyas="igen">
+            <kurzusnev>Numerical and optimization methods</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A1/312</hely>
+            <idopont>Wednesday 10:00</idopont>
+            <oktato>Dr. Házy Attila</oktato>
+        </kurzus>
+        <kurzus id="3" nyelv="magyar" jovahagyas="igen">
+            <kurzusnev>Valószínűség-számítás</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A1/319</hely>
+            <idopont>Hétfő 10:00</idopont>
+            <oktato>Dr. Fegyverneki Sándor</oktato>
+        </kurzus>
+    </kurzusok>
+</UY5E1L_kurzusfelvetel>
