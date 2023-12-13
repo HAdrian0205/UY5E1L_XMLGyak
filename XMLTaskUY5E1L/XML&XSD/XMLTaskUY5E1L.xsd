@@ -210,7 +210,16 @@
                         <xs:selector xpath="rendelttermek"></xs:selector>
                         <xs:field xpath="@rendelesid"></xs:field>
                     </xs:keyref>
+
+                    <!-- Ret-Ter 1:1 kapcsolat -->
+
+                    <xs:unique name="ret_ter">
+                        <xs:selector xpath="rendelttermek" />
+                        <xs:field xpath="termekid" />
+                    </xs:unique>
                 </xs:element>
+                
+                
 
                 <!-- Termékek -->
                 <xs:element name="termek" minOccurs="1" maxOccurs="unbounded">
@@ -256,8 +265,8 @@
                         <xs:selector xpath="szallito"></xs:selector>
                         <xs:field xpath="@szallitoid"></xs:field>
                     </xs:key>
-                </xs:element>
 
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
