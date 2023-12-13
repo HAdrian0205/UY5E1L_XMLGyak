@@ -302,97 +302,97 @@ xs:noNamespaceSchemaLocation="XMLTaskUY5E1L.xsd">
 
     <!-- Rendelt Termékek -->
 
-    <rendelttermek rendelttermekid="1" termekid="3" rendelesid="5">
+    <rendelttermek rendelttermekid="1" rendelesid="5">
         <egysegar>1899.50</egysegar>
         <afa>27%</afa>
         <mennyiseg>4</mennyiseg>
     </rendelttermek>
     
-    <rendelttermek rendelttermekid="2" termekid="9" rendelesid="8">
+    <rendelttermek rendelttermekid="2" rendelesid="8">
         <egysegar>499.50</egysegar>
         <afa>27%</afa>
         <mennyiseg>2</mennyiseg>
     </rendelttermek>
     
-    <rendelttermek rendelttermekid="3" termekid="3" rendelesid="1">
+    <rendelttermek rendelttermekid="3" rendelesid="1">
         <egysegar>1899.50</egysegar>
         <afa>27%</afa>
         <mennyiseg>3</mennyiseg>
     </rendelttermek>
     
-    <rendelttermek rendelttermekid="4" termekid="12" rendelesid="3">
+    <rendelttermek rendelttermekid="4" rendelesid="3">
         <egysegar>149.95</egysegar>
         <afa>27%</afa>
         <mennyiseg>3</mennyiseg>
     </rendelttermek>
     
-    <rendelttermek rendelttermekid="5" termekid="2" rendelesid="2">
+    <rendelttermek rendelttermekid="5" rendelesid="2">
         <egysegar>999.99</egysegar>
         <afa>27%</afa>
         <mennyiseg>1</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="6" termekid="11" rendelesid="4">
+    <rendelttermek rendelttermekid="6" rendelesid="4">
         <egysegar>1999.99</egysegar>
         <afa>27%</afa>
         <mennyiseg>1</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="7" termekid="10" rendelesid="1">
+    <rendelttermek rendelttermekid="7" rendelesid="1">
         <egysegar>399.00</egysegar>
         <afa>27%</afa>
         <mennyiseg>1</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="8" termekid="8" rendelesid="1">
+    <rendelttermek rendelttermekid="8" rendelesid="1">
         <egysegar>129.99</egysegar>
         <afa>27%</afa>
         <mennyiseg>4</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="9" termekid="7" rendelesid="10">
+    <rendelttermek rendelttermekid="9" rendelesid="10">
         <egysegar>1899.00</egysegar>
         <afa>27%</afa>
         <mennyiseg>1</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="10" termekid="1" rendelesid="10">
+    <rendelttermek rendelttermekid="10" rendelesid="10">
         <egysegar>2799.00</egysegar>
         <afa>27%</afa>
         <mennyiseg>2</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="11" termekid="8" rendelesid="6">
+    <rendelttermek rendelttermekid="11" rendelesid="6">
         <egysegar>129.99</egysegar>
         <afa>27%</afa>
         <mennyiseg>2</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="12" termekid="5" rendelesid="9">
+    <rendelttermek rendelttermekid="12" rendelesid="9">
         <egysegar>249.99</egysegar>
         <afa>27%</afa>
         <mennyiseg>3</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="13" termekid="2" rendelesid="7">
+    <rendelttermek rendelttermekid="13" rendelesid="7">
         <egysegar>999.99</egysegar>
         <afa>27%</afa>
         <mennyiseg>5</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="14" termekid="9" rendelesid="7">
+    <rendelttermek rendelttermekid="14" rendelesid="7">
         <egysegar>499.50</egysegar>
         <afa>27%</afa>
         <mennyiseg>3</mennyiseg>
     </rendelttermek>
 
-    <rendelttermek rendelttermekid="15" termekid="6" rendelesid="10">
+    <rendelttermek rendelttermekid="15" rendelesid="10">
         <egysegar>129.95</egysegar>
         <afa>27%</afa>
         <mennyiseg>2</mennyiseg>
     </rendelttermek>   
 
-    <rendelttermek rendelttermekid="16" termekid="10" rendelesid="3">
+    <rendelttermek rendelttermekid="16" rendelesid="3">
         <egysegar>399.00</egysegar>
         <afa>27%</afa>
         <mennyiseg>2</mennyiseg>
