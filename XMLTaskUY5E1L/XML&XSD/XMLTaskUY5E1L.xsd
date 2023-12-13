@@ -204,6 +204,14 @@
                         <xs:attribute name="szallitoid" type="xs:int" use="required" />
                     </xs:complexType>
                 </xs:element>
+
+                <!-- 1:1 kapcsolat -->
+                <xs:element name="ret-ter" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:attribute name="rendelttermekid" type="xs:int" use="required"></xs:attribute>
+                        <xs:attribute name="termekid" type="xs:int" use="required"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
 

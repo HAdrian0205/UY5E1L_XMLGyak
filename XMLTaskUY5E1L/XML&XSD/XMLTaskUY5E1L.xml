@@ -497,4 +497,22 @@ xs:noNamespaceSchemaLocation="XMLTaskUY5E1L.xsd">
             <hazszam>14</hazszam>
         </kozpontcime>
     </szallito>
+
+    <!-- 1:1 kapcsolat megvalósítása -->
+    <ret-ter rendelttermekid="1" termekid="3" />
+    <ret-ter rendelttermekid="2" termekid="9" />
+    <ret-ter rendelttermekid="3" termekid="3" />
+    <ret-ter rendelttermekid="4" termekid="12" />
+    <ret-ter rendelttermekid="5" termekid="2" />
+    <ret-ter rendelttermekid="6" termekid="11" />
+    <ret-ter rendelttermekid="7" termekid="10" />
+    <ret-ter rendelttermekid="8" termekid="8" />
+    <ret-ter rendelttermekid="9" termekid="7" />
+    <ret-ter rendelttermekid="10" termekid="1" />
+    <ret-ter rendelttermekid="11" termekid="8" />
+    <ret-ter rendelttermekid="12" termekid="5" />
+    <ret-ter rendelttermekid="13" termekid="2" />
+    <ret-ter rendelttermekid="14" termekid="9" />
+    <ret-ter rendelttermekid="15" termekid="6" />
+    <ret-ter rendelttermekid="16" termekid="10" />
 </webshop>
