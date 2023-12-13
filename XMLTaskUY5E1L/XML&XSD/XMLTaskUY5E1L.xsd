@@ -261,7 +261,6 @@
         </xs:keyref>
 
         <!-- Ret-Ter 1:1 kapcsolat -->
-
         <xs:unique name="ret_ter">
             <xs:selector xpath="rendelttermek" />
             <xs:field xpath="@termekid" />
