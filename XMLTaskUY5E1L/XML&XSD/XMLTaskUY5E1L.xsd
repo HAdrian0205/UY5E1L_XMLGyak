@@ -167,7 +167,6 @@
                             <xs:element ref="mennyiseg" maxOccurs="1" />
                         </xs:sequence>
                         <xs:attribute name="rendelttermekid" type="xs:int" use="required" />
-                        <xs:attribute name="termekid" type="xs:int" use="required" />
                         <xs:attribute name="rendelesid" type="xs:int" use="required" />
                     </xs:complexType>
                 </xs:element>
