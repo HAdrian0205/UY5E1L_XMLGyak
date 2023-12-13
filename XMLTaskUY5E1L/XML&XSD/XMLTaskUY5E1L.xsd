@@ -112,12 +112,6 @@
                         </xs:sequence>
                         <xs:attribute name="ugyfelid" type="xs:int" use="required" />
                     </xs:complexType>
-
-                    <!-- Ügyfél ID (kulcs) -->
-                    <xs:key name="ugyfel_key">
-                        <xs:selector xpath="ugyfel"></xs:selector>
-                        <xs:field xpath="@ugyfelid"></xs:field>
-                    </xs:key>
                 </xs:element>
                 
                 <!-- Kapcsolótábla (Ügy-Re) -->
@@ -162,23 +156,6 @@
                         <xs:attribute name="ugyfelid" type="xs:int" use="required" />
                         <xs:attribute name="szallitoid" type="xs:int" use="required" />
                     </xs:complexType>
-
-                    <!-- Rendelés ID (kulcs) -->
-                    <xs:key name="rendeles_key">
-                        <xs:selector xpath="rendeles"></xs:selector>
-                        <xs:field xpath="@rendelesid"></xs:field>
-                    </xs:key>
-
-                    <!-- Rendelés idegen kulcsok -->
-                    <xs:keyref name="rendeles_ugyfel_fkey" refer="ugyfel_key">
-                        <xs:selector xpath="rendeles"></xs:selector>
-                        <xs:field xpath="@ugyfelid"></xs:field>
-                    </xs:keyref>
-                    
-                    <xs:keyref name="rendeles_szallito_fkey" refer="szallito_key">
-                        <xs:selector xpath="rendeles"></xs:selector>
-                        <xs:field xpath="@szallitoid"></xs:field>
-                    </xs:keyref>
                 </xs:element>
 
                 <!-- Rendelt Termékek -->
@@ -193,33 +170,7 @@
                         <xs:attribute name="termekid" type="xs:int" use="required" />
                         <xs:attribute name="rendelesid" type="xs:int" use="required" />
                     </xs:complexType>
-
-                    <!-- Rendelés ID (kulcs) -->
-                    <xs:key name="rendelttermek_key">
-                        <xs:selector xpath="rendelttermek"></xs:selector>
-                        <xs:field xpath="@rendelttermekid"></xs:field>
-                    </xs:key>
-
-                    <!-- Rendelt Termék idegen kulcsok -->
-                    <xs:keyref name="rendelttermek_termek_fkey" refer="termek_key">
-                        <xs:selector xpath="rendelttermek"></xs:selector>
-                        <xs:field xpath="@termekid"></xs:field>
-                    </xs:keyref>
-
-                    <xs:keyref name="rendelttermek_rendeles_fkey" refer="rendeles_key">
-                        <xs:selector xpath="rendelttermek"></xs:selector>
-                        <xs:field xpath="@rendelesid"></xs:field>
-                    </xs:keyref>
-
-                    <!-- Ret-Ter 1:1 kapcsolat -->
-
-                    <xs:unique name="ret_ter">
-                        <xs:selector xpath="rendelttermek" />
-                        <xs:field xpath="termekid" />
-                    </xs:unique>
                 </xs:element>
-                
-                
 
                 <!-- Termékek -->
                 <xs:element name="termek" minOccurs="1" maxOccurs="unbounded">
@@ -231,12 +182,6 @@
                         <xs:attribute name="termekid" type="xs:int" use="required" />
                         <xs:attribute name="akcios" type="akcioTipus" use="required" />
                     </xs:complexType>
-
-                    <!-- Termék ID (kulcs) -->
-                    <xs:key name="termek_key">
-                        <xs:selector xpath="termek"></xs:selector>
-                        <xs:field xpath="@termekid"></xs:field>
-                    </xs:key>
                 </xs:element>
 
                 <!-- Szállító -->
@@ -259,16 +204,68 @@
                         </xs:sequence>
                         <xs:attribute name="szallitoid" type="xs:int" use="required" />
                     </xs:complexType>
-                    
-                    <!-- Szállító ID (kulcs) -->
-                    <xs:key name="szallito_key">
-                        <xs:selector xpath="szallito"></xs:selector>
-                        <xs:field xpath="@szallitoid"></xs:field>
-                    </xs:key>
-
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
+
+        <!-- Rendelés ID (kulcs) -->
+        <xs:key name="rendelttermek_key">
+            <xs:selector xpath="rendelttermek"></xs:selector>
+            <xs:field xpath="@rendelttermekid"></xs:field>
+        </xs:key>
+
+        <!-- Szállító ID (kulcs) -->
+        <xs:key name="szallito_key">
+            <xs:selector xpath="szallito"></xs:selector>
+            <xs:field xpath="@szallitoid"></xs:field>
+        </xs:key>
+
+        <!-- Termék ID (kulcs) -->
+        <xs:key name="termek_key">
+            <xs:selector xpath="termek"></xs:selector>
+            <xs:field xpath="@termekid"></xs:field>
+        </xs:key>
+
+        <!-- Ügyfél ID (kulcs) -->
+        <xs:key name="ugyfel_key">
+            <xs:selector xpath="ugyfel"></xs:selector>
+            <xs:field xpath="@ugyfelid"></xs:field>
+        </xs:key>
+
+        <!-- Rendelés ID (kulcs) -->
+        <xs:key name="rendeles_key">
+            <xs:selector xpath="rendeles"></xs:selector>
+            <xs:field xpath="@rendelesid"></xs:field>
+        </xs:key>
+
+        <!-- Rendelés idegen kulcsok -->
+        <xs:keyref name="rendeles_ugyfel_fkey" refer="ugyfel_key">
+            <xs:selector xpath="rendeles"></xs:selector>
+            <xs:field xpath="@ugyfelid"></xs:field>
+        </xs:keyref>
+        
+        <xs:keyref name="rendeles_szallito_fkey" refer="szallito_key">
+            <xs:selector xpath="rendeles"></xs:selector>
+            <xs:field xpath="@szallitoid"></xs:field>
+        </xs:keyref>
+
+        <!-- Rendelt Termék idegen kulcsok -->
+        <xs:keyref name="rendelttermek_termek_fkey" refer="termek_key">
+            <xs:selector xpath="rendelttermek"></xs:selector>
+            <xs:field xpath="@termekid"></xs:field>
+        </xs:keyref>
+
+        <xs:keyref name="rendelttermek_rendeles_fkey" refer="rendeles_key">
+            <xs:selector xpath="rendelttermek"></xs:selector>
+            <xs:field xpath="@rendelesid"></xs:field>
+        </xs:keyref>
+
+        <!-- Ret-Ter 1:1 kapcsolat -->
+
+        <xs:unique name="ret_ter">
+            <xs:selector xpath="rendelttermek" />
+            <xs:field xpath="@termekid" />
+        </xs:unique>
     </xs:element>
 
 </xs:schema>
